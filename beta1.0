@@ -1,0 +1,24 @@
+#include <iostream>
+#include<string>
+using std::cin;
+using std::cout;
+using std::endl;
+int main() {
+	int num;
+	char answer='y';
+	while (answer == 'y') {
+		cout << "Type number that u want to convert to binary code:" << endl;
+		cin >> num;
+		cout << "Thanks!Converting!" << endl << "Here is your number ";
+		for (int i = sizeof(int) * 8 - 1; i >= 0; --i) {
+			if (num & (1 << i)) //сдвиг 1 на i бит (в данном случае на числа от 32 и до 0), дале происходит выполнение операции &(OR) она изменяет только значение i бита, все остальные не изменяются
+			{
+				cout << 1;
+			}
+			else cout << 0;
+		}
+		cout << "Type "y" if u want to continue or random button to exit" << endl;
+		cin >> answer;
+	}
+	return 0;
+}

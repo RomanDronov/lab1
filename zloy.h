@@ -2,15 +2,15 @@
 #define ZLOY_H
 
 
-class zloy
+class Nikolay
 {
+   int height;
+    char vocabulary[2500];
+    int weigth;
+    short int dick_size;
     public:
-        zloy();
-        virtual ~zloy();
-
-    protected:
-
-    private:
+    void gay();
+    void fuck();
 };
 
 #endif // ZLOY_H
